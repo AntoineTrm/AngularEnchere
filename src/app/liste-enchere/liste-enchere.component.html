@@ -1,0 +1,31 @@
+<app-en-tete></app-en-tete>
+<h3>filtres :</h3>
+<!--si connecter uniquement -->
+<input type="radio" name="achats" id="achats"> Achats <!--si vrai alors les checkbox utilisable-->
+<div class="checkbox">
+    <input type="checkbox" name="encheresOuvertes" id=""> enchères ouvertes <br>
+    <input type="checkbox" name="mesEncheresEnCours" id=""> mes enchères en cours <br>
+    <input type="checkbox" name="mesEncheresRemportees" id=""> mes enchères remportées <br>
+</div>
+<input type="radio" name="achats" id="achats"> Achats <!--si vrai alors les checkbox utilisable-->
+<div class="checkbox">
+    <input type="checkbox" name="mesVentesEnCours" id=""> mes ventes en cours <br>
+    <input type="checkbox" name="mesVentesNonDebutees" id=""> mes ventes non débutées <br>
+    <input type="checkbox" name="mesVentesTerminees" id=""> mes ventes terminées <br>
+</div>
+<!--si connecter uniquement -->
+
+<div>
+    <label for="categorie">Catégories </label>
+    <select name="categorie" id="categorie"> <!--catégories a prendre dans la base de données-->
+        <option value="cat1">cat1</option>
+    </select>
+</div>
+<div>
+    <input type="search" name="rechercheArticle" id="rechercheArticle" placeholder="Le nom de l'article contient">
+</div>
+<input type="button" value="Rechercher">
+<div class="article">
+    <app-article></app-article>
+</div>
+
