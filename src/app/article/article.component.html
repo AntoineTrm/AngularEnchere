@@ -8,7 +8,18 @@
     fin de l'enchère : "dateFinEnchere"
     <div>
         <p style="float: left;">Retrait : </p>
-        " adresse retrait " Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat 
-    </div> 
+        " adresse retrait " Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+    </div>
 
 </div>
+
+<ul class="products">
+  <li *ngFor="let a of articles; let i=index;">
+
+    <h1>{{a.nomArticle}}</h1>
+    <p>{{a.categorie.libelle}}</p>
+
+    <button class="delete" title="delete product"
+    >x</button>
+  </li>
+</ul>
