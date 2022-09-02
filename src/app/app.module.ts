@@ -14,6 +14,8 @@ import { CreationComponent } from './creation/creation.component';
 import { CreerUnCompteComponent } from './creer-un-compte/creer-un-compte.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ModifierProfilComponent } from './modifier-profil/modifier-profil.component';
+import { DetailVenteComponent } from './detail-vente/detail-vente.component';
+import { NouvelleVenteComponent } from './nouvelle-vente/nouvelle-vente.component';
 
 
 const appRoutes: Routes = [
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
     CreationComponent,
     CreerUnCompteComponent,
     ProfilComponent,
-    ModifierProfilComponent
+    ModifierProfilComponent,
+    DetailVenteComponent,
+    NouvelleVenteComponent
   ],
   imports: [
     BrowserModule,
