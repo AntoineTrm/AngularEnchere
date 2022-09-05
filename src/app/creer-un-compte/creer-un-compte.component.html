@@ -1,5 +1,4 @@
-<app-en-tete></app-en-tete>
- 
+
 <div id="creeCompte"> 
     <h2> Créer un compte</h2>
 </div>
@@ -58,7 +57,8 @@
     </div>
 
     <div>
-        <input type="button" value="Créer" (click)="ajouterUtilisateur()">
-        <input type="button" value="Annuler">
+        <input type="button" value="Créer" (click)="ajouterUtilisateur()" routerLink="/liste-enchere">
+        <input type="button" value="Annuler" routerLink="/en-tete">
     </div>
 </form>
+

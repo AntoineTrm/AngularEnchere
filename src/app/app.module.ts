@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
+import { BrowserModule, createApplication } from '@angular/platform-browser'
 import {RouterModule, Routes} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -20,6 +20,20 @@ import { NouvelleVenteComponent } from './nouvelle-vente/nouvelle-vente.componen
 
 const appRoutes: Routes = [
   
+  {path: 'en-tete',component:EnTeteComponent},
+  {path:'connexion',component:ConnexionComponent},
+  {path:'liste-enchere',component:ListeEnchereComponent},
+  {path:'article',component:ArticleComponent},
+  {path:'creation',component:CreationComponent},
+  {path:'creer-un-compte',component:CreerUnCompteComponent},
+  {path:'profil',component:ProfilComponent},
+  {path:'modifier-profil',component:ModifierProfilComponent},
+  {path:'detail-vente',component:DetailVenteComponent},
+  {path:'nouvelle-vente',component:NouvelleVenteComponent}
+
+
+
+
 
 ];
 
