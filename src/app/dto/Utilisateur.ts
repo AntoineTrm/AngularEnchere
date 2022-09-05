@@ -1,6 +1,6 @@
 import {Article} from "./Article";
 
-export interface Vendeur {
+export interface Utilisateur {
   //vendeur":    {
   //       "noUtilisateur": 0,
   //       "pseudo": "gzetsu",

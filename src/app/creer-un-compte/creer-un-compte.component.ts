@@ -12,4 +12,6 @@ export class CreerUnCompteComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //ajouterUtilisateur()
+
 }

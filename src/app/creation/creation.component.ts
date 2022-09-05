@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-creation',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public rest: RestService, private router: Router) { }
+
 
   ngOnInit(): void {
   }

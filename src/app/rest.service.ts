@@ -4,6 +4,7 @@ import { catchError, retry } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Utilisateur } from './dto/Utilisateur';
 
 @Injectable({
   providedIn: 'root'
@@ -40,6 +41,14 @@ export class RestService {
   //faire un get article pour
   getArticle(noArticle: string): Observable<any> {
     return this.http.get<Article>(this.endpoint + 'articles/' + noArticle).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  //créer un utilisateur
+  CreerUtilisateur(utilisateur: any): Observable<any>{
+    return this.http.post(this.endpoint + 'creationUtilisateur', utilisateur).pipe
+    (
       catchError(this.handleError)
     );
   }
