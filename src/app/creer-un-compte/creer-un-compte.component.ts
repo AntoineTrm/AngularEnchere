@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RestService } from '../rest.service';
 
 @Component({
   selector: 'app-creer-un-compte',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreerUnCompteComponent implements OnInit {
 
-  constructor() { }
+  constructor(public rest: RestService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  //ajouterUtilisateur()
+  ajouterUtilisateur(): void {
+    this.ajouterUtilisateur
+  }
 
 }
