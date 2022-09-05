@@ -5,16 +5,26 @@
 
 <p>"PC Gamer pour travailler"</p>
 
-<img src="" alt=""> "remplacement photo"
+<!--<img src="" alt=""> "remplacement photo"-->
+<p>lien image :{{detail.img}}</p>
 
 <div>
-    <p>Description : " Je suis l'outil de travail incontournable"</p><br>
+    <!--<p>Description : " Je suis l'outil de travail incontournable"</p><br>
     <p>Catégorie : "informatique"</p>
     <p>Meilleur offre: "210" pts par "Bob le bricoleur"</p>
     <p>Mise à prix : "185 points"</p>
     <p>Fin de l'enchère : "09/10/2018"</p>
     <p>Retrait: "10 allée des Alouettes 44800 Saint Herblain"</p><br>
-    <p>Vendeur: "Antoine le Niortais"</p>
+    <p>Vendeur: "Antoine le Niortais"</p>-->
+    <p>Description:{{detail.description}}</p>
+    <p>Categorie:{{detail.categorie}}</p>
+    <p>Meilleur offre:{{detail.meilleure_offre}}</p>
+    <p>Mise à prix :{{detail.mise_a_prix}}</p>
+    <p>Fin de l'enchère :{{detail.fin_de_enchere}}</p>
+    <p>Retrait :{{detail.retrait}}</p>
+    <p>Vendeur :{{detail.vendeur}}</p>
+
+      
     <div>
         <label for="maproposition">Ma proposition:</label>
         <input type="number" name="maproposition" id="maproposition"><br><br>
