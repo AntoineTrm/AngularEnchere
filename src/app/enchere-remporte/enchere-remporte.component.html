@@ -1,2 +1,24 @@
 <p>Vous avez remporté l'enchère</p>
 
+<img src="" alt=""> "insertion d'une image"
+
+<div>
+    <p>Meilleur offre:{{remporte.offre}}</p>
+    <p>Mise à prix :{{remporte.prix}}</p>
+    
+</div>
+
+<fieldset>
+    <legend> Retrait</legend>
+    <div>
+        <p> Adresse :{{remporte.retrait}}</p>
+       
+        <p>Vendeur : <a href="" routerLink="/profil">{{remporte.vendeur}}</a></p>
+        <p>Tel:{{remporte.tel}}</p>
+    </div>
+
+    <div>
+        <input type="button" value="Retrait effectué" routerLink="/liste-enchere">
+    </div>
+
+</fieldset>

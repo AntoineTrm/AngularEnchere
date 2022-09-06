@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticleVendeurComponent implements OnInit {
 
+  vendu={img:'lien image',offre:'210 pts par jojo44',prix:'175 points',
+  fin_de_enchere:'09/10/2018',retrait:'5 rue des Pinsons 44000 Nantes',
+  vendeur:'NineJea'
+
+}
   constructor() { }
 
   ngOnInit(): void {

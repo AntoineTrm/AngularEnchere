@@ -33,6 +33,7 @@ const appRoutes: Routes = [
   {path:'detail-vente',component:DetailVenteComponent},
   {path:'nouvelle-vente',component:NouvelleVenteComponent},
   {path:'enchere-remporte',component:EnchereRemporteComponent},
+  {path:'article-vendeur',component:ArticleVendeurComponent},
   {path:'',redirectTo:'/liste-enchere',pathMatch:'full'}
 
 
