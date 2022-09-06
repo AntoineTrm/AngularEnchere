@@ -1,11 +1,11 @@
-
+<div>test</div>
 <br>
 <form [formGroup]="formulaireConnexion">
     <div>
         <label for="identifiant">Identifiant : </label>
         <input type="text" [(ngModel)]="identifiant" formControlName="identifiant" name="identifiant" id="identifiant" style="float: right;">
     </div>
-    
+
     <div>
         <label style="float: left;" for="password">Mot de Passe : </label>
         <input type="password" [(ngModel)]="password" formControlName="password" name="password" id="password" style="float: right;">
@@ -19,7 +19,7 @@
             <input type="checkbox" name="seSouvenir" id="seSouvenir"> Se souvenir de moi
             <p><a href="">Mot de passe oublié</a></p>
         </div>
-        
+
     </div>
 
 </form>
