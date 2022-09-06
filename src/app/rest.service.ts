@@ -5,6 +5,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Utilisateur } from './dto/Utilisateur';
+import { Connexion } from './dto/Connexion';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,12 @@ export class RestService {
   endpoint = 'http://localhost:8080/';
   constructor(private http: HttpClient) {
   }
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
 
   private extractData(res: Response): any {
     const body = res;
@@ -46,10 +53,20 @@ export class RestService {
   }
 
   //créer un utilisateur
-  CreerUtilisateur(utilisateur: any): Observable<any>{
+  creerUtilisateur(utilisateur: any): Observable<any>{
     return this.http.post(this.endpoint + 'creationUtilisateur', utilisateur).pipe
     (
       catchError(this.handleError)
     );
+  }
+
+  //créer un utilisateur
+  connecterUtilisateur(utilisateur: Connexion): Observable<any>{
+    console.log(utilisateur.getPseudo());
+    return this.http.post(this.endpoint + 'connexion', utilisateur, this.httpOptions)/*.pipe
+    (
+      catchError(this.handleError)
+      
+    );*/
   }
 }
