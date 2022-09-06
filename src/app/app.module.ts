@@ -16,6 +16,8 @@ import { ProfilComponent } from './profil/profil.component';
 import { ModifierProfilComponent } from './modifier-profil/modifier-profil.component';
 import { DetailVenteComponent } from './detail-vente/detail-vente.component';
 import { NouvelleVenteComponent } from './nouvelle-vente/nouvelle-vente.component';
+import { EnchereRemporteComponent } from './enchere-remporte/enchere-remporte.component';
+import { ArticleVendeurComponent } from './article-vendeur/article-vendeur.component';
 
 
 const appRoutes: Routes = [
@@ -29,7 +31,9 @@ const appRoutes: Routes = [
   {path:'profil',component:ProfilComponent},
   {path:'modifier-profil',component:ModifierProfilComponent},
   {path:'detail-vente',component:DetailVenteComponent},
-  {path:'nouvelle-vente',component:NouvelleVenteComponent}
+  {path:'nouvelle-vente',component:NouvelleVenteComponent},
+  {path:'enchere-remporte',component:EnchereRemporteComponent},
+  {path:'',redirectTo:'/liste-enchere',pathMatch:'full'}
 
 
 
@@ -49,7 +53,9 @@ const appRoutes: Routes = [
     ProfilComponent,
     ModifierProfilComponent,
     DetailVenteComponent,
-    NouvelleVenteComponent
+    NouvelleVenteComponent,
+    EnchereRemporteComponent,
+    ArticleVendeurComponent
   ],
   imports: [
     BrowserModule,
