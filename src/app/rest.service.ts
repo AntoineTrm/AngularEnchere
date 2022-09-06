@@ -63,10 +63,10 @@ export class RestService {
   //créer un utilisateur
   connecterUtilisateur(utilisateur: Connexion): Observable<any>{
     console.log(utilisateur.getPseudo());
-    return this.http.post(this.endpoint + 'connexion', utilisateur, this.httpOptions)/*.pipe
+    return this.http.post(this.endpoint + 'connexion', utilisateur, this.httpOptions).pipe
     (
       catchError(this.handleError)
-      
-    );*/
+
+    );
   }
 }

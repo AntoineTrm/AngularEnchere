@@ -10,22 +10,11 @@ import { RestService } from '../rest.service';
   styleUrls: ['./connexion.component.css']
 })
 export class ConnexionComponent implements OnInit {
-  formulaireConnexion!: FormGroup; 
+  formulaireConnexion!: FormGroup;
   identifiant: string ="";
   password: string ="";
   constructor(private formBuilder: FormBuilder, public rest: RestService, private router: Router) {
-    //this.creerFormulaire();
    }
-
-  /*private creerFormulaire() {
-    
-    this.formulaireConnexion = this.formBuilder.group(
-      {
-        nom : ['', Validators.required],
-        prenom : ['', [Validators.required, Validators.minLength(5)]]
-      }
-    );
-  }*/
 
   ngOnInit(): void {
     this.formulaireConnexion = new FormGroup({
@@ -35,8 +24,9 @@ export class ConnexionComponent implements OnInit {
   }
 
   connecterUtilisateur(){
-    //utilisateurConnecte = new Connexion (this.formulaireConnexion?.value);
-    //utilisateurConnecte:Connexion =  new Connexion ("", ""/*this.formulaireConnexion.controls.identifiant.value, this.formulaireConnexion.controls.motDePasse.value*/);
-    this.rest.connecterUtilisateur(new Connexion (this.identifiant, this.password))
+    this.rest.connecterUtilisateur(new Connexion (this.identifiant, this.password)).subscribe((resp: any) => {
+
+      console.log("verif");
+    });
   }
 }
