@@ -1,63 +1,63 @@
 
-<div id="creeCompte"> 
+<div id="creeCompte">
     <h2> Créer un compte</h2>
 </div>
-<form action="">
+<form [formGroup]="formulaireCreerCompte">
     <div id="information">
         <div class="gauche">
             <label for="pseudo">Pseudo : </label>
-            <input type="text" name="pseudo" id="pseudo" value=""><br><br>
+            <input [(ngModel)]="pseudo" formControlName="pseudo" type="text" name="pseudo" id="pseudo" value=""><br><br>
         </div>
 
         <div class="droite">
             <label for="nom">Nom : </label>
-            <input type="text" name="nom" id="nom" value=""><br><br>
+            <input [(ngModel)]="nom" formControlName="nom" type="text" name="nom" id="nom" value=""><br><br>
         </div>
 
-        <div class="gauche">   
+        <div class="gauche">
             <label for="prenom">Prenom : </label>
-            <input type="text" name="prenom" id="prenom" value=""><br><br>
+            <input [(ngModel)]="prenom" formControlName="prenom" type="text" name="prenom" id="prenom" value=""><br><br>
         </div>
 
         <div class="droite">
-            <label for="Prenom">Email : </label>
-            <input type="text" name="email" id="email" value=""><br><br>
+            <label for="email">Email : </label>
+            <input [(ngModel)]="email" formControlName="email" type="text" name="email" id="email" value=""><br><br>
         </div>
-        
+
         <div class="gauche">
             <label for="telephone">Telephone : </label>
-            <input type="text" name="telephone" id="telephone" value=""><br><br>
+            <input [(ngModel)]="telephone" formControlName="telephone" type="text" name="telephone" id="telephone" value=""><br><br>
         </div>
-        
+
         <div class="droite">
             <label for="rue">Rue : </label>
-            <input type="text" name="rue" id="rue" value=""><br><br>
+            <input [(ngModel)]="rue" formControlName="rue" type="text" name="rue" id="rue" value=""><br><br>
         </div>
-        
+
         <div class="gauche">
             <label for="codePostal">Code postal : </label>
-            <input type="text" name="codepostal" id="codepostal" value=""><br><br>
+            <input [(ngModel)]="codePostal" formControlName="codePostal" type="text" name="codePostal" id="codePostal" value=""><br><br>
         </div>
-        
+
         <div class="droite">
             <label for="ville">Ville : </label>
-            <input type="text" name="ville" id="ville" value=""><br><br>
+            <input [(ngModel)]="ville" formControlName="ville" type="text" name="ville" id="ville" value=""><br><br>
         </div>
-        
+
         <div class="gauche">
-            <label for="motdepasse">Mot de passe : </label>
-            <input type="password" name="motdepasse" id="motdepasse" value=""><br><br>
+            <label for="password">Mot de passe : </label>
+            <input [(ngModel)]="password" formControlName="password" type="password" name="password" id="password" value=""><br><br>
         </div>
-        
+
         <div class="droite">
             <label for="confirmation">Confirmation : </label>
-            <input type="password" name="confirmation" id="confirmation" value=""><br><br>
+            <input [(ngModel)]="confirmPassword" formControlName="password" type="password" name="confirmation" id="confirmation" value=""><br><br>
         </div>
 
     </div>
 
     <div>
-        <input type="button" value="Créer" (click)="ajouterUtilisateur()" routerLink="/liste-enchere">
+        <input type="button" value="Créer" (click)="ajouterUtilisateur()" >
         <input type="button" value="Annuler" routerLink="/liste-enchere">
     </div>
 </form>

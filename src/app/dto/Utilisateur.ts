@@ -1,6 +1,6 @@
 import {Article} from "./Article";
 
-export interface Utilisateur {
+export class Utilisateur {
   //vendeur":    {
   //       "noUtilisateur": 0,
   //       "pseudo": "gzetsu",
@@ -17,20 +17,47 @@ export interface Utilisateur {
   //       "listeArticles": null,
   //       "listeEncheres": null
 
+  /* attribut de l'interface changé en classe
   noUtilisateur: string;
   pseudo: string;
   nom: string;
   prenom: string;
   email: string;
-  telephone: number;
+  telephone: string;
   rue: string;
-  codePostal: number;
+  codePostal: string;
   ville: string;
   motDePasse: string;
   credit: number;
   administrateur: boolean;
   listeArticles: [];
-  listeEncheres: [];
+  listeEncheres: [];*/
 
+  noUtilisateur: string | undefined;
+  pseudo: string;
+  nom: string;
+  prenom: string;
+  email: string;
+  telephone: string;
+  rue: string;
+  codePostal: string;
+  ville: string;
+  motDePasse: string;
+  credit: number = 0;
+  administrateur: boolean = false;
+  listeArticles: [] | undefined;
+  listeEncheres: [] | undefined;
 
+  constructor(pseudo: string, nom: string, prenom: string, email: string, telephone: string,
+              rue: string, codePostal: string, ville: string, motDePasse: string) {
+    this.pseudo=pseudo;
+    this.nom=nom;
+    this.prenom=prenom;
+    this.email=email;
+    this.telephone=telephone;
+    this.rue=rue;
+    this.codePostal=codePostal;
+    this.ville=ville;
+    this.motDePasse=motDePasse;
+  }
 }

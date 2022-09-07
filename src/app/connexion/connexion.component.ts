@@ -13,7 +13,7 @@ export class ConnexionComponent implements OnInit {
   formulaireConnexion!: FormGroup;
   identifiant: string ="";
   password: string ="";
-  constructor(private formBuilder: FormBuilder, public rest: RestService, private router: Router) {
+  constructor(public rest: RestService, private router: Router) {
    }
 
   ngOnInit(): void {

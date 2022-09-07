@@ -53,7 +53,7 @@ export class RestService {
   }
 
   //créer un utilisateur
-  creerUtilisateur(utilisateur: any): Observable<any>{
+  creerUtilisateur(utilisateur: Utilisateur): Observable<any>{
     return this.http.post(this.endpoint + 'creationUtilisateur', utilisateur).pipe
     (
       catchError(this.handleError)
